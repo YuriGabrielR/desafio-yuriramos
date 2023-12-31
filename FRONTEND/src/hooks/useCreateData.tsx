@@ -11,6 +11,7 @@ const useInsertStudentResult = () => {
   ) => {
 
     try {
+
       setLoading(true);
       const response = await api.post("/newresult", {
         bimestre,
@@ -18,7 +19,7 @@ const useInsertStudentResult = () => {
         nota,
       });
 
-      console.log("Resposta do servidor:", response.data);
+      console.log("Resposta do servidor:", response.status);
 
     } catch (error) {
 
